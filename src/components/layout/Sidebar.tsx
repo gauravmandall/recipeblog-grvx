@@ -74,6 +74,7 @@ export function Sidebar() {
       )}
 
       {/* Sidebar */}
+      {!isMobile && (
       <aside 
         className={cn(
           "fixed top-0 left-0 z-50 h-full bg-sidebar border-r border-sidebar-border transition-all duration-300 ease-in-out",
@@ -93,6 +94,7 @@ export function Sidebar() {
           </div>
 
           {/* Navigation */}
+          
           <nav className="flex-1 px-3 py-4 overflow-y-auto scrollbar-none">
             <ul className="space-y-2">
               {sidebarItems.map((item) => {
@@ -126,6 +128,7 @@ export function Sidebar() {
               )})}
             </ul>
           </nav>
+          
 
           {/* Create Recipe Button */}
           <div className="px-3 py-4">
@@ -162,6 +165,7 @@ export function Sidebar() {
           </div>
         </div>
       </aside>
+      )}
     </>
   );
 }
