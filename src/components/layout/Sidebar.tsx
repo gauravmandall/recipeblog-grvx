@@ -54,6 +54,7 @@ export function Sidebar() {
   return (
     <>
       {/* Mobile Toggle Button */}
+      {!isMobile && (
       <Button
         variant="outline"
         size="icon"
@@ -63,6 +64,7 @@ export function Sidebar() {
       >
         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </Button>
+      )}
 
       {/* Overlay for mobile when sidebar is open */}
       {isMobile && isOpen && (
